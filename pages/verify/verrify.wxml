@@ -1,0 +1,8 @@
+<!--pages/verify/verrify.wxml-->
+<view class="verify">
+  <view class="verify-text">请输入管理员验证码</view>
+  <form bindsubmit="formSubmit">
+    <input name="input" type="text" maxlength="6"></input>
+    <button type="primary" form-type="submit">确定</button>
+  </form>
+</view>

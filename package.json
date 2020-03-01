@@ -1,0 +1,15 @@
+{
+  "name": "wqy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "王钦谕",
+  "license": "ISC",
+  "dependencies": {
+    "vant-weapp": "^0.5.27",
+    "wx-server-sdk": "^1.8.2"
+  }
+}

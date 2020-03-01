@@ -1,0 +1,23 @@
+/* pages/verify/verrify.wxss */
+input {
+  margin-left: 125rpx;
+  width: 500rpx;
+  height: 70rpx;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 60rpx;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+}
+
+.verify {
+  margin-top: 20rpx;
+}
+
+.verify-text {
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 56rpx;
+}

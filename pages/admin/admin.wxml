@@ -1,0 +1,31 @@
+<!--admin/admin.wxml-->
+<view class="set-principal">
+  <view class="set-text">设置负责人</view>
+  <form bindsubmit="setPrimary">
+    <view class="admin">
+      <view class="info-text">地址：</view>
+      <picker value="{{addressIndex}}" range="{{addressArray}}">
+        <view class="picker">{{addressArray[addressIndex]}}</view>
+      </picker>
+    </view>
+    <view class="admin">
+      <view class="info-text">负责人：</view>
+      <picker value="{{personIndex}}" range="{{personArray}}">
+        <view class="picker">{{personArray[personIndex]}}</view>
+      </picker>
+    </view>
+    <button type="primary" form-type="submit" bindtap="setPrimary">设置为负责人</button>
+    <button type="warn" form-type="submit">导出表单</button>
+  </form>
+</view>
+<view class="set-address">
+  <view class="set-text">添加地址/发出货单</view>
+  <form bindsubmit="addAdress">
+    <view class="admin">
+      <view class="address-text">新地址/发货地址：</view>
+      <input class="info-input" type="text" placeholder="请输入地址"></input>
+    </view>
+    <button type="primary" form-type="submit" bindtap="addAdress">添加新地址</button>
+    <button type="warn" form-type="submit">发送此货单</button>
+  </form>
+</view>

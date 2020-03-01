@@ -1,0 +1,50 @@
+/* admin/admin.wxss */
+.setPrincipal {
+  font-size: 35rpx;
+  line-height: 42rpx;
+}
+
+.set-text {
+  font-size: 40rpx;
+  line-height: 56rpx;
+  text-align: center;
+}
+
+.admin {
+  display: flex;
+  padding-top: 30rpx;
+  padding-right: 10rpx;
+  align-items: center;
+}
+
+.info-text {
+  padding-right: 10rpx;
+  padding-left: 110rpx;
+  width: 150rpx;
+}
+
+.picker {
+  width: 370rpx;
+  height: 56rpx;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+button {
+  margin-top: 30rpx;
+}
+
+.set-address {
+  margin-top: 50rpx;
+  border-top: solid 1px rgba(0, 0, 0, 0.5);
+  padding-top: 50rpx;
+}
+
+.info-input {
+  width: 370rpx;
+  height: 56rpx;
+  border: rgba(0, 0, 0, 0.3) solid 1px;
+}
+
+.address-text {
+  margin-left: 30rpx;
+}
