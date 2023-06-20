@@ -1,52 +1,64 @@
 <!--pages/buyer/buyer.wxml-->
 <view class="page">
-  <view class="user-info">
-    <view class="descrip">信息输入</view>
-    <view class="user">
-      <view class="info-text">姓名：</view>
-      <input class="info-input" type="text" placeholder="请输入姓名" confirm-type="done"></input>
+  <form bindsubmit="submit">
+    <view class="user-info">
+      <view class="descrip">信息输入</view>
+      <view class="user">
+        <view class="info-text">姓名：</view>
+        <input class="info-input" type="text" placeholder="请输入姓名" confirm-type="done" name="name" value="{{name}}" disabled="{{disabled}}" style="color:{{font_color}}"></input>
+      </view>
+      <view class="user">
+        <view class="info-text">电话：</view>
+        <input class="info-input" type="number" placeholder="请输入电话号码" maxlength="11" name="phone" value="{{phone}}" disabled="{{disabled}}" style="color:{{font_color}}"></input>
+      </view>
+      <view class="user">
+        <view class="info-text">地址：</view>
+        <input class="info-input" wx:if="{{disabled}}" type="text" name="address" value="{{address}}" disabled="{{disabled}}" style="color:{{font_color}}"></input>
+        <picker wx:else value="{{index}}" range="{{array}}" name="address" bindchange="setAddress">
+          <view class="picker">{{array[index]}}</view>
+        </picker>
+      </view>
+      <view class="user">
+        <view class="info-text">门牌：</view>
+        <input class="info-input" type="text" placeholder="请输入门牌号" name="id" value="{{id}}" disabled="{{disabled}}" style="color:{{font_color}}"></input>
+      </view>
     </view>
-    <view class="user">
-      <view class="info-text">电话：</view>
-      <input class="info-input" type="number" placeholder="请输入电话号码" maxlength="11"></input>
+    <view class="buyer">
+      <view class="descrip">选择购买数量</view>
+      <view class="production">
+        <view class="pro-text">乳鸽：</view>
+        <input class="account-input" type="number" maxlength="3" name="ruge" value="{{ruge}}"></input>
+        <view class="pro-info">份（100元/份，每份5只）</view>
+      </view>
+      <view class="production">
+        <view class="pro-text">老鸽：</view>
+        <input class="account-input" type="number" maxlength="3" name="laoge" value="{{laoge}}"></input>
+        <view class="pro-info">份（80元/份，每份2只）</view>
+      </view>
+      <view class="production">
+        <view class="pro-text">土鸡：</view>
+        <input class="account-input" type="number" maxlength="3" name="tuji" value="{{tuji}}"></input>
+        <view class="pro-info">份（80元/份，每份1只）</view>
+      </view>
+      <view class="production">
+        <view class="pro-text">藕：</view>
+        <input class="account-input" type="number" maxlength="3" name="ou" value="{{ou}}"></input>
+        <view class="pro-info">份（20元/份，每份4斤）</view>
+      </view>
+      <view class="production">
+        <view class="pro-text">绿壳鸡蛋：</view>
+        <input class="account-input" type="number" maxlength="3" name="egg" value="{{egg}}"></input>
+        <view class="pro-info">份（60元/份，每份60个）</view>
+      </view>
     </view>
-    <view class="user">
-      <view class="info-text">地址：</view>
-      <picker value="{{index}}" range="{{array}}">
-        <view class="picker">{{array[index]}}</view>
-      </picker>
+    <view class="choose">
+      <view wx:if="{{hasBuy==false}}">
+        <button type="primary" form-type="submit" id="info">提交数量及信息</button>
+      </view>
+      <view wx:else>
+        <button  type="primary" form-type="submit" id="update">修改数量</button>
+      </view>
+      <button form-type="submit" id="search">查看订单</button>
     </view>
-    <view class="user">
-      <view class="info-text">门牌：</view>
-      <input class="info-input" type="text" placeholder="请输入门牌号"></input>
-    </view>
-  </view>
-  <view class="buyer">
-    <view class="descrip">选择购买数量</view>
-    <view class="production">
-      <view class="pro-text">乳鸽：</view>
-      <input class="account-input" type="number" maxlength="3"></input>
-      <view class="pro-info">份（100元/份，每份5只）</view>
-    </view>
-    <view class="production">
-      <view class="pro-text">老鸽：</view>
-      <input class="account-input" type="number" maxlength="3"></input>
-      <view class="pro-info">份（80元/份，每份2只）</view>
-    </view>
-    <view class="production">
-      <view class="pro-text">土鸡：</view>
-      <input class="account-input" type="number" maxlength="3"></input>
-      <view class="pro-info">份（80元/份，每份1只）</view>
-    </view>
-    <view class="production">
-      <view class="pro-text">绿壳鸡蛋：</view>
-      <input class="account-input" type="number" maxlength="3"></input>
-      <view class="pro-info">份（60元/份，每份60个）</view>
-    </view>
-  </view>
-  <view class="choose">
-    <button type="primary" form-type="submit">提交数量及信息</button>
-    <button>修改数量</button>
-    <button type="warn" form-type="reset">重置所有</button>
-  </view>
+  </form>
 </view>

@@ -5,6 +5,11 @@
   align-items: center;
 }
 
+.text {
+  font-size: 30rpx;
+  color: #aaa;
+}
+
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;

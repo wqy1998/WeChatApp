@@ -34,10 +34,7 @@ Page({
   onTapCheckAdmin: ()=> {
     wx.cloud.callFunction({
       name:'getId',
-      data:{
-      },
       success:(res=>{
-        console.log(res)
         if (res.result.data.length != 0) {
           wx.navigateTo({
             url: '../admin/admin',
@@ -82,7 +79,6 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,

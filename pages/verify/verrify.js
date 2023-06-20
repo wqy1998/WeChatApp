@@ -21,7 +21,8 @@ Page({
       admin.add({
         data:{
           description:"增加新的管理员",
-          isAdmin:true
+          isAdmin:true,
+          date:new Date()
         }
       })
       wx.navigateTo({

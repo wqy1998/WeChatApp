@@ -1,6 +1,53 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
+<view>
+  <block wx:if="{{isAdmin==false}}">
+    <view class="name-phone">{{name}} {{phone}}</view>
+    <view class="address">{{address}}{{id}}</view>
+    <view class="array" wx:for="{{array}}" wx:for-index="index" wx:for-item="count" wx:key="time">
+      <view class="item" wx:for="{{array[index]}}" wx:for-index="index1" wx:for-item="count" wx:key="tuji">
+        <view class="time" wx:if="{{index1=='时间'}}">
+          <view class="time1">{{index1}}</view>
+          <view class="time2">{{count}}</view>
+        </view>
+        <view wx:elif="{{index1=='总计'}}">
+          <view class="index1">{{index1}}</view>
+            <view class="count">{{count}}元</view>
+        </view>
+        <view wx:else>
+          <view class="index-count">
+            <view class="index">{{index1}}</view>
+            <view class="count">{{count}}份</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <form bindsubmit="search">
+      <view class="addressArray">
+        <view class="text">地址：</view>
+        <picker name="address" value="{{index}}" range="{{addressArray}}" bindchange="setAddress">
+          <view class="picker">{{addressArray[index]}}</view>
+        </picker>
+        <button type="primary" size="mini" form-type="submit">查询</button>
+      </view>
+    </form>
+    <view class="array1" wx:for="{{array}}" wx:for-index="index" wx:for-item="count" wx:key="time">
+      <view class="item1" wx:for="{{array[index]}}" wx:for-index="index1" wx:for-item="item" wx:key="time">
+        <view class="info" wx:if="{{index1=='姓名'||index1=='电话'||index1=='门牌号'||index1=='总计'}}">
+          <view class="info1">
+            <view class="info2">{{index1}}</view>
+            <view class="info3">{{item}}</view>
+          </view>
+        </view>
+        <view wx:else>
+          <view class="index-count1">
+            <view class="index2">{{index1}}</view>
+            <view class="count2">{{item}}份</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{sum!=0}}" class="sumery">总计：{{sum}}元</view>
   </block>
 </view>

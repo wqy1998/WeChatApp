@@ -33,18 +33,20 @@ button {
   margin-top: 30rpx;
 }
 
-.set-address {
-  margin-top: 50rpx;
+.set {
+  margin-top: 30rpx;
   border-top: solid 1px rgba(0, 0, 0, 0.5);
-  padding-top: 50rpx;
+  padding-top: 30rpx;
 }
 
 .info-input {
   width: 370rpx;
-  height: 56rpx;
+  height: 60rpx;
   border: rgba(0, 0, 0, 0.3) solid 1px;
 }
 
-.address-text {
-  margin-left: 30rpx;
+.info {
+  padding-right: 10rpx;
+  padding-left: 65rpx;
+  width: 195rpx;
 }

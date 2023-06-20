@@ -1,8 +1,116 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.name-phone {
+  text-align: center;
 }
-.log-item {
-  margin: 10rpx;
+.address {
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+.array {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10rpx;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  margin-bottom: 20rpx;
+  margin-right: 10rpx;
+}
+.time {
+  display: flex;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  padding-bottom: 5rpx;
+  width: 730rpx;
+  border-bottom: solid 1px black;
+}
+.time1 {
+  background-color: rgba(169, 169, 169, 0.5);
+  width: 146rpx;
+  text-align: center;
+}
+.time2 {
+  margin-left: 20rpx;
+}
+.index-count {
+  border-top: black 1px solid;
+  padding-top: 5rpx;
+}
+.index {
+  font-size: 35rpx;
+  width: 142.7rpx;
+  background-color: rgba(169, 169, 169, 0.5);
+  text-align: center;
+  border-right: rgb(255, 255, 255) 1.5px solid;
+}
+.count {
+  font-size: 35rpx;
+  text-align: center;
+}
+.sum {
+  flex-wrap: wrap;
+}
+.index1 {
+  font-size: 35rpx;
+  width: 730rpx;
+  background-color: rgba(169, 169, 169, 0.5);
+  text-align: center;
+}
+.addressArray {
+  display: flex;
+  align-items: center;
+}
+.text {
+  margin-left: 30rpx;
+}
+.picker {
+  width: 370rpx;
+  height: 56rpx;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.array1 {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  margin-bottom: 15rpx;
+  margin-top: 20rpx;
+}
+.info {
+  margin-left: 0.5px;
+  display: flex;
+  margin-top: 5rpx;
+  padding-bottom: 5rpx;
+}
+.info1 {
+  font-size: 35rpx;
+}
+.info2 {
+  background-color: rgba(169, 169, 169, 0.5);
+  width: 185rpx;
+  text-align: center;
+  border-right: rgb(255, 255, 255) 1.5px solid;
+}
+.info3 {
+  text-align: center;
+  font-size: 30rpx;
+}
+.index-count1 {
+  margin-left: 0.5px;
+}
+.index2 {
+  font-size: 35rpx;
+  width: 147rpx;
+  background-color: rgba(169, 169, 169, 0.5);
+  text-align: center;
+  border-right: rgb(255, 255, 255) 1.5px solid;
+}
+.count2 {
+  font-size: 35rpx;
+  text-align: center;
+}
+.sumery {
+  font-size: 40rpx;
+  line-height: 56rpx;
+  text-align: center;
+  width: 750rpx;
+  background-color: rgba(169, 169, 169, 0.5);
 }

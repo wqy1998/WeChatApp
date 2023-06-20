@@ -1,31 +1,44 @@
 <!--admin/admin.wxml-->
 <view class="set-principal">
   <view class="set-text">设置负责人</view>
-  <form bindsubmit="setPrimary">
+  <form bindsubmit="submitPrimary">
     <view class="admin">
       <view class="info-text">地址：</view>
-      <picker value="{{addressIndex}}" range="{{addressArray}}">
+      <picker value="{{addressIndex}}" range="{{addressArray}}" bindchange="setAddress" name="add">
         <view class="picker">{{addressArray[addressIndex]}}</view>
       </picker>
     </view>
     <view class="admin">
       <view class="info-text">负责人：</view>
-      <picker value="{{personIndex}}" range="{{personArray}}">
-        <view class="picker">{{personArray[personIndex]}}</view>
+      <picker value="{{customerIndex}}" range="{{customerArray}}" bindchange="setPrimary" name="pri">
+        <view class="picker">{{customerArray[customerIndex]}}</view>
       </picker>
     </view>
-    <button type="primary" form-type="submit" bindtap="setPrimary">设置为负责人</button>
-    <button type="warn" form-type="submit">导出表单</button>
+    <view>
+      <button id="set" type="primary" form-type="submit">设置为负责人</button>
+      <button id="search" form-type="submit">查看货单</button>
+    </view>
   </form>
 </view>
-<view class="set-address">
-  <view class="set-text">添加地址/发出货单</view>
-  <form bindsubmit="addAdress">
+<view class="set">
+  <view class="set-text">添加地址</view>
+  <form bindsubmit="addAddress">
     <view class="admin">
-      <view class="address-text">新地址/发货地址：</view>
-      <input class="info-input" type="text" placeholder="请输入地址"></input>
+      <view class="info-text">新地址：</view>
+      <input name="newAddress" maxlength="20" class="info-input" type="text" placeholder="请输入地址"></input>
     </view>
-    <button type="primary" form-type="submit" bindtap="addAdress">添加新地址</button>
-    <button type="warn" form-type="submit">发送此货单</button>
+    <button type="primary" form-type="submit">添加新地址</button>
+  </form>
+</view>
+<view class="set">
+  <view class="set-text">发货</view>
+  <form bindsubmit="send">
+    <view class="admin">
+      <view class="info">发货地址：</view>
+      <picker value="{{addressIndex1}}" range="{{addressArray}}" bindchange="setAddress1" name="add">
+        <view class="picker">{{addressArray[addressIndex1]}}</view>
+      </picker>
+    </view>
+    <button type="primary" form-type="submit">发送此货单</button>
   </form>
 </view>
